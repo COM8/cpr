@@ -30,7 +30,7 @@ class StringHolder {
     StringHolder(StringHolder&& old) noexcept = default;
     virtual ~StringHolder() = default;
 
-    StringHolder& operator=(StringHolder&& old) noexcept = default;
+    StringHolder& operator=(StringHolder&& old) = default;
 
     StringHolder& operator=(const StringHolder& other) = default;
 
@@ -118,7 +118,7 @@ class Url : public StringHolder<Url> {
     Url(Url&& old) noexcept = default;
     ~Url() override = default;
 
-    Url& operator=(Url&& old) noexcept = default;
+    Url& operator=(Url&& old) = default;
     Url& operator=(const Url& other) = default;
 };
 
